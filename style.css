@@ -24,10 +24,10 @@ body {
   background-color: var(--Very-Dark-Blue);
 }
 .card {
-  max-width: 350px;
+  max-width: 400px;
   height: auto;
-  padding: 2rem 1.5em;
-  border-radius: 1rem;
+  padding: 2rem;
+  border-radius: 2rem;
   background: linear-gradient(
     to bottom,
     var(--Dark-Blue),
@@ -40,23 +40,25 @@ body {
 }
 .icon-star {
   padding: 1rem;
-  background-color: hsla(216, 12%, 54%, 0.2);
+  background-color: hsla(216, 12%, 54%, 0.1);
   position: relative;
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
 }
 .icon-star img {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1rem;
+  height: 1rem;
 }
 .title {
   color: inherit;
-  font-size: 1.65rem;
+  font-size: 1.9rem;
   font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
 }
 .description {
   color: var(--Light-Grey);
@@ -74,23 +76,25 @@ body {
   color: var(--Light-Grey);
 }
 .btn {
-  width: 3em;
-  height: 3rem;
+  width: 3.5em;
+  height: 3.5rem;
   position: relative;
   border-radius: 50%;
   border-style: none;
+  font-size: 1rem;
   background-color: hsla(216, 12%, 54%, 0.2);
 }
-.btn:hover {
-  color: var(--White);
+.active {
+  color: var(--White) !important;
   cursor: pointer;
   transition: 0.5ms;
-  background-color: var(--Light-Grey);
+  background-color: var(--Light-Grey) !important;
 }
-.active,
+.btn:hover,
 .btn:active {
-  background-color: var(--Orange) !important;
-  color: inherit !important;
+  cursor: pointer;
+  background-color: var(--Orange);
+  color: inherit;
   transition: color 0.5s, background-color 0.5s;
 }
 .btn-submit {
@@ -102,8 +106,8 @@ body {
   background-color: var(--Orange);
   width: 100%;
   border-radius: 1.5rem;
-  padding: 0.9rem;
-  margin-top: 0.5rem;
+  padding: 0.8rem;
+  margin-top: 1rem;
 }
 .btn-submit:hover,
 .btn-submit:active {
@@ -144,4 +148,37 @@ body {
 .thanks-container p,
 .rating-container p {
   margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 330px;
+    height: auto;
+  }
+  .title {
+    font-size: 24px;
+    margin-top: 1rem;
+  }
+  .rating-selected p,
+  .thanks-container p,
+  .rating-container p {
+    color: hsl(217, 12%, 63%, 0.8);
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .icon-star {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .icon-star img {
+    width: 0.9rem;
+    height: auto;
+  }
+  .btn {
+    width: 3em;
+    height: 3rem;
+  }
+  .btn-submit {
+    margin-top: 0.5rem;
+  }
 }
